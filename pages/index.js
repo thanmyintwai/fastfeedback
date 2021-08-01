@@ -2,10 +2,11 @@ import { useAuth } from '../lib/auth'
 export default function Index() {
   const auth = useAuth()
   
-  return 
+  return (
     <>
     <p>{process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN}</p>
-  auth.user ? (
+    {/* { auth.user ? ( )}
+    {auth.user} ? (
     <div>
       
       <p>Email: {auth.user.email}</p>
@@ -13,6 +14,7 @@ export default function Index() {
     </div>
   ) : (
     <button onClick={(e) => auth.signinWithGitHub()}>Sign In</button>
-  )
+  ) */}
   </>
+  )
 }
